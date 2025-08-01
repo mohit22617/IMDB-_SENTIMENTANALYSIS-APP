@@ -1,3 +1,12 @@
+import nltk
+nltk.download('punkt')
+nltk.download('stopwords')  # optional if using stopwords
+
+from nltk.tokenize import word_tokenize
+from nltk.corpus import stopwords
+
+
+
 import streamlit as st
 import joblib
 import re
