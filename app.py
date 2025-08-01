@@ -1,14 +1,17 @@
 import nltk
 import os
 
-# Create a local nltk_data directory
+# Set up a local nltk_data directory
 nltk_data_dir = os.path.join(os.path.dirname(__file__), 'nltk_data')
 os.makedirs(nltk_data_dir, exist_ok=True)
 
-# Set the NLTK data path and download 'punkt'
+# Append this dir to nltk's path
 nltk.data.path.append(nltk_data_dir)
+
+# Download required resources if not already present
 nltk.download('punkt', download_dir=nltk_data_dir)
 nltk.download('stopwords', download_dir=nltk_data_dir)
+
 
 
 
